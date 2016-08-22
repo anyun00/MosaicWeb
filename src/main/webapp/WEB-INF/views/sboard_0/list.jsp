@@ -3,14 +3,14 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ page session="false"%>
-<html>
-<head>
-<title>list.jsp</title>
-</head>
-<body>
 
+<%@include file="../include/header.jsp"%>
+
+<!-- Main content -->
+<section class="content">
 	<div class="row">
 		<!-- left column -->
+
 
 		<div class="col-md-12">
 			<!-- general form elements -->
@@ -122,41 +122,42 @@
 
 	</div>
 	<!-- /.row -->
+</section>
+<!-- /.content -->
 
-	<script>
-		var result = '${msg}';
 
-		if (result == 'SUCCESS') {
-			alert("처리가 완료되었습니다.");
-			location.replace(self.location);
-		}
-	</script>
+<script>
+	var result = '${msg}';
 
-	<script>
-		$(document).ready(
-				function() {
+	if (result == 'SUCCESS') {
+		alert("처리가 완료되었습니다.");
+		location.replace(self.location);
+	}
+</script>
 
-					$('#searchBtn').on(
-							"click",
-							function(event) {
+<script>
+	$(document).ready(
+			function() {
 
-								self.location = "list"
-										+ '${pageMaker.makeQuery(1)}'
-										+ "&searchType="
-										+ $("select option:selected").val()
-										+ "&keyword="
-										+ $('#keywordInput').val();
+				$('#searchBtn').on(
+						"click",
+						function(event) {
 
-							});
+							self.location = "list"
+									+ '${pageMaker.makeQuery(1)}'
+									+ "&searchType="
+									+ $("select option:selected").val()
+									+ "&keyword=" + $('#keywordInput').val();
 
-					$('#newBtn').on("click", function(evt) {
+						});
 
-						self.location = "register";
+				$('#newBtn').on("click", function(evt) {
 
-					});
+					self.location = "register";
 
 				});
-	</script>
 
-</body>
-</html>
+			});
+</script>
+
+<%@include file="../include/footer.jsp"%>
