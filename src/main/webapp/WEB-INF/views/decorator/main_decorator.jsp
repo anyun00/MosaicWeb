@@ -456,8 +456,10 @@
 		</aside>
 
 		<!-- Content Wrapper. Contains page content -->
-		<div class="content-wrapper">
-			<section class="content">
+		
+		<div class="content-wrapper" style="border: 1px solid red">
+			
+			<section class="content" style="border: 2px solid blue">
 				<!-- ################## -->
 				<!-- START Main Content -->
 				<!-- ################## -->
