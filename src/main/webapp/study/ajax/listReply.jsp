@@ -48,6 +48,24 @@
 			</ul>
 		</div>
 	</div>
+	
+	<div id="myModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2 class="modal-title">댓글 수정 & 삭제</h2>
+					<span class="close">&times;</span>
+				</div>
+				<div class="modal-body">
+				
+				
+				</div>
+				<div class="modal-footer">
+				
+				</div>			
+			</div>
+		</div>
+	</div>
 
 	<script id="mytemplate" type="text/x-handlebars-template">
 		<ul class="list-group">
@@ -56,7 +74,9 @@
 				[{{rno}}] {{replyer}} <i class="fa fa-diamond"></i> {{replytext}}
 				<button class="btn btn-info modify" data-rno ="{{rno}}" 
 				 							 data-bno ="{{bno}}" 
-											 data-replytext="{{replytext}}">
+											 data-replytext="{{replytext}}"
+											 data-togle="modal"
+											 data-target="#myModal">
 					Modify
 				</button>
 			</li>
@@ -82,8 +102,21 @@
 				str += "bno=" + $(this).attr("data-bno")+ " ";
 				str += "replytext=" + $(this).attr("data-replytext");
 				
-				alert (str);
-			});
+// 				alert (str);
+// 				if(confirm(str)){
+// 					alert("확인 클릭")
+					
+// 				} else {
+// 					alert("취소");
+					
+// 				};
+				
+// 				var text = prompt("댓글 수정 & 삭제", str);
+// 				if (text != null){
+// 					alert(text);
+// 				}
+
+// 			});
 			
 		}
 		

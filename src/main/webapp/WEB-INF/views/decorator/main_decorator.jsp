@@ -463,10 +463,12 @@
 				<!-- ################## -->
 				<!-- START Main Content -->
 				<!-- ################## -->
-				<sitemesh:write property="body" />
-				<!-- ################## -->
-				<!-- END   Main Content -->
-				<!-- ################## -->
+				<div class="container-fluid">
+					<sitemesh:write property="body" />
+					<!-- ################## -->
+					<!-- END   Main Content -->
+					<!-- ################## -->
+				</div>
 			</section>
 		</div>
 		
